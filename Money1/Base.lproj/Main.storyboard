@@ -32,6 +32,13 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1+1+1+1+1" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q7j-YW-GnV">
+                                <rect key="frame" x="267" y="419" width="142" height="25"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="JAN-cV-jxk">
                                 <rect key="frame" x="6" y="445" width="165" height="233"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -54,14 +61,14 @@
                                                     <rect key="frame" x="40" y="8" width="70" height="35"/>
                                                     <subviews>
                                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Gt1-jA-Ds4">
-                                                            <rect key="frame" x="0.0" y="0.0" width="35.000000000000007" height="35"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="35" height="35"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="35" id="WiK-Uv-e2t"/>
                                                                 <constraint firstAttribute="width" constant="35" id="yov-WY-8xd"/>
                                                             </constraints>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a2a-dG-Uxz">
-                                                            <rect key="frame" x="38.000000000000007" y="0.0" width="42.999999999999993" height="35"/>
+                                                            <rect key="frame" x="38" y="0.0" width="43" height="35"/>
                                                             <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="17"/>
                                                             <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                             <nil key="highlightedColor"/>
@@ -139,14 +146,14 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <view alpha="0.10000000000000001" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hYT-0d-Ey4">
-                                                    <rect key="frame" x="63" y="8" width="1" height="33.666666666666664"/>
+                                                    <rect key="frame" x="63" y="8" width="1" height="34"/>
                                                     <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="1" id="bOh-e5-B1u"/>
                                                     </constraints>
                                                 </view>
                                                 <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="VEU-s3-eVv">
-                                                    <rect key="frame" x="72" y="2" width="80.666666666666657" height="45"/>
+                                                    <rect key="frame" x="72" y="2" width="81" height="45"/>
                                                     <subviews>
                                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="serve" translatesAutoresizingMaskIntoConstraints="NO" id="loN-d8-nAE">
                                                             <rect key="frame" x="0.0" y="0.0" width="45" height="45"/>
@@ -156,7 +163,7 @@
                                                             </constraints>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="晚餐" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0pS-dr-5by">
-                                                            <rect key="frame" x="50" y="0.0" width="30.666666666666657" height="45"/>
+                                                            <rect key="frame" x="50" y="0.0" width="31" height="45"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
@@ -224,6 +231,9 @@
                                                         <color key="value" red="0.14880423323171141" green="0.74189006975279193" blue="0.41079807605856078" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="numbers:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bGd-kr-Y7c"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yCb-bU-RrL" customClass="FancyButton" customModule="Money1" customModuleProvider="target">
                                                 <rect key="frame" x="58" y="0.0" width="50" height="50"/>
@@ -246,6 +256,9 @@
                                                         <color key="value" red="0.14880423323171141" green="0.74189006975279193" blue="0.41079807605856078" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="numbers:" destination="BYZ-38-t0r" eventType="touchUpInside" id="J4m-9e-hHL"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gd2-dg-eEr" customClass="FancyButton" customModule="Money1" customModuleProvider="target">
                                                 <rect key="frame" x="116" y="0.0" width="50" height="50"/>
@@ -268,6 +281,9 @@
                                                         <color key="value" red="0.14880423323171141" green="0.74189006975279193" blue="0.41079807605856078" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="numbers:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Si2-A0-tbx"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oji-t3-49w" customClass="FancyButton" customModule="Money1" customModuleProvider="target">
                                                 <rect key="frame" x="174" y="0.0" width="50" height="50"/>
@@ -290,6 +306,9 @@
                                                         <color key="value" red="0.14880423323171141" green="0.74189006975279193" blue="0.41079807605856078" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="clearButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="l0F-Ms-Sdv"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -317,6 +336,9 @@
                                                         <color key="value" red="0.14880423323171141" green="0.74189006975279193" blue="0.41079807605856078" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="numbers:" destination="BYZ-38-t0r" eventType="touchUpInside" id="S9B-KX-9YB"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="beW-SG-I9m" customClass="FancyButton" customModule="Money1" customModuleProvider="target">
                                                 <rect key="frame" x="58" y="0.0" width="50" height="50"/>
@@ -339,6 +361,9 @@
                                                         <color key="value" red="0.14880423323171141" green="0.74189006975279193" blue="0.41079807605856078" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="numbers:" destination="BYZ-38-t0r" eventType="touchUpInside" id="j0Z-UJ-BQm"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UrZ-PX-lVg" customClass="FancyButton" customModule="Money1" customModuleProvider="target">
                                                 <rect key="frame" x="116" y="0.0" width="50" height="50"/>
@@ -361,6 +386,9 @@
                                                         <color key="value" red="0.14880423323171141" green="0.74189006975279193" blue="0.41079807605856078" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="numbers:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dmA-S8-P3h"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DLc-6a-Wu6" customClass="FancyButton" customModule="Money1" customModuleProvider="target">
                                                 <rect key="frame" x="174" y="0.0" width="50" height="50"/>
@@ -383,6 +411,9 @@
                                                         <color key="value" red="0.14880423323171141" green="0.74189006975279193" blue="0.41079807605856078" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="operate:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3nu-o5-ieT"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -410,6 +441,9 @@
                                                         <color key="value" red="0.14880423323171141" green="0.74189006975279193" blue="0.41079807605856078" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="numbers:" destination="BYZ-38-t0r" eventType="touchUpInside" id="IFK-jT-S6z"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3wo-qf-R6R" customClass="FancyButton" customModule="Money1" customModuleProvider="target">
                                                 <rect key="frame" x="58" y="0.0" width="50" height="50"/>
@@ -432,6 +466,9 @@
                                                         <color key="value" red="0.14880423323171141" green="0.74189006975279193" blue="0.41079807605856078" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="numbers:" destination="BYZ-38-t0r" eventType="touchUpInside" id="59U-kn-G2q"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Dv-Xh-hQv" customClass="FancyButton" customModule="Money1" customModuleProvider="target">
                                                 <rect key="frame" x="116" y="0.0" width="50" height="50"/>
@@ -454,6 +491,9 @@
                                                         <color key="value" red="0.14880423323171141" green="0.74189006975279193" blue="0.41079807605856078" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="numbers:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0ph-wA-c1M"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kbx-xY-bHg" customClass="FancyButton" customModule="Money1" customModuleProvider="target">
                                                 <rect key="frame" x="174" y="0.0" width="50" height="50"/>
@@ -476,6 +516,9 @@
                                                         <color key="value" red="0.14880423323171141" green="0.74189006975279193" blue="0.41079807605856078" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="operate:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HPm-f2-F9f"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -502,6 +545,9 @@
                                                         <color key="value" red="0.14880423323171141" green="0.74189006975279193" blue="0.41079807605856078" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="numbers:" destination="BYZ-38-t0r" eventType="touchUpInside" id="AfY-l0-p5I"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p8S-Ch-GKK" customClass="FancyButton" customModule="Money1" customModuleProvider="target">
                                                 <rect key="frame" x="58" y="0.0" width="166" height="50"/>
@@ -524,6 +570,9 @@
                                                         <color key="value" red="0.14880423323171141" green="0.74189006975279193" blue="0.41079807605856078" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="chickButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cZZ-Y2-hbB"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -574,6 +623,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" selectedImage="food" systemItem="featured" id="jKy-oN-KrE"/>
                     <connections>
+                        <outlet property="amountLabel" destination="LtN-QC-U4u" id="Lcd-zU-Io2"/>
                         <outlet property="dateTextField" destination="3KB-yj-8uA" id="jJU-dj-mdV"/>
                         <outlet property="dayAmount" destination="CFn-RI-gfi" id="OMF-Hp-Gpi"/>
                         <outlet property="isTodayLabel" destination="Rf6-hB-AFQ" id="XKl-Uo-Vth"/>

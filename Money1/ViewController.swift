@@ -28,6 +28,7 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
     @IBOutlet weak var selectedItemLabel: UILabel!
     @IBOutlet weak var dayAmount: UILabel!
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var amountLabel: UILabel!
     
     
     var record = Record()
@@ -37,6 +38,14 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
     let Yformatter = DateFormatter()
     let timeformater = DateFormatter()
     let now = Date()
+    
+    
+    
+    
+    //caculator
+    var isFirstKeyIn = true
+    var firstNumber = 0
+    var sum = 0
 //    let tapGestureRecognizer = UITapGestureRecognizer()
     
     
@@ -108,8 +117,46 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func numbers(_ sender: FancyButton) {
+        let digit = sender.currentTitle
+        if isFirstKeyIn {
+            amountLabel.text = digit
+            firstNumber = Int(amountLabel.text!)!
+            isFirstKeyIn = false
+        } else {
+            amountLabel.text = amountLabel.text! + digit!
+            firstNumber = Int(amountLabel.text!)!
+        }
+    }
+    
+   
+    @IBAction func operate(_ sender: FancyButton) {
+        let operater = sender.currentTitle!
+        
+        switch operater {
+        case "+":
+            sum = firstNumber + sum
+            amountLabel.text = String(sum)
+        case "−":
+            sum = firstNumber - sum
+            amountLabel.text = String(sum)
+        default:
+            break
+        }
+    }
+    
+
     
     
+    @IBAction func chickButton(_ sender: FancyButton) {
+    }
+    
+    @IBAction func clearButton(_ sender: FancyButton) {
+        amountLabel.text = "0"
+        isFirstKeyIn = true
+        firstNumber = 0
+        sum = 0
+    }
     
     //MARK: UICollectionViewDataSource
     //顯示列的時候呼叫
