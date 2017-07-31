@@ -7,12 +7,13 @@
 //
 
 import Foundation
+import UIKit
 
 class ConsumptionCategory {
     var name = ""
-    var image = ""
+    var image:UIImage?
     
-    init(name: String, image: String) {
+    init(name: String, image: UIImage) {
         self.name = name
         self.image = image
     }

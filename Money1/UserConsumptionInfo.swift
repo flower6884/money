@@ -7,15 +7,16 @@
 //
 
 import Foundation
+import  UIKit
 
 class UserConsumptionInfo {
     var item:String = ""
     var date:String = ""
     var time:String = ""
-    var image:String = ""
+    var image:UIImage?
     var amount:Int = 0
     
-    init(item:String, date:String, time:String, image:String, amount:Int) {
+    init(item:String, date:String, time:String, image:UIImage, amount:Int) {
         self.item = item
         self.date = date
         self.time = time
