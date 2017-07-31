@@ -74,11 +74,13 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
         
         title = "記帳" //navigationbar上的title
         
+        selectedItemLabel.text = "請選擇類別"
+        
         //選擇框圖片外觀
         SelectBoxImage.backgroundColor = UIColor.clear
         SelectBoxImage.layer.cornerRadius = 5
         SelectBoxImage.layer.borderWidth = 2
-        SelectBoxImage.layer.borderColor = #colorLiteral(red: 0.1488042332, green: 0.7418900698, blue: 0.4107980761, alpha: 1).cgColor
+        SelectBoxImage.layer.borderColor = #colorLiteral(red: 0.03921568627, green: 0.7411764706, blue: 0.6274509804, alpha: 1).cgColor
 
         //tableView 外觀
         tableView.separatorInset = UIEdgeInsets(top: 0, left: -10, bottom: 0, right: -10)
@@ -97,11 +99,11 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
         
         //日期選擇器
         myDatePicker = UIDatePicker() //實體化
-        myDatePicker.datePickerMode = .dateAndTime //設定時間選擇器的模式
+        myDatePicker.datePickerMode = .date //設定時間選擇器的模式
         myDatePicker.locale = Locale(identifier: "zh_TW") //時區，台灣
         myDatePicker.window?.makeKey()
-        myDatePicker.backgroundColor = #colorLiteral(red: 0.03921568627, green: 0.7411764706, blue: 0.6274509804, alpha: 1)
-        myDatePicker.setValue(UIColor.white, forKey: "textColor")
+        myDatePicker.backgroundColor = UIColor.white
+        myDatePicker.setValue(#colorLiteral(red: 0.03921568627, green: 0.7411764706, blue: 0.6274509804, alpha: 1), forKey: "textColor")
 //        myDatePicker.layer.frame = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
 //        myDatePicker.layer.backgroundColor = UIColor.clear.cgColor
 //        myDatePicker.layer.backgroundColor = UIColor(colorLiteralRed: 0.1, green: 0.5, blue: 0.1, alpha: 0).cgColor
@@ -241,13 +243,13 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
             displayValue = brain.result
             descriptionLabel.text = brain.description
 
-        if (selectedItemLabel.text == "" /*||  Int(display.text!)! <= 08*/) {
+        if (selectedItemLabel.text == "請選擇類別" /*||  Int(display.text!)! <= 08*/) {
             
             let alertController = UIAlertController(title: "提醒！", message: "請輸入完整資訊", preferredStyle: UIAlertControllerStyle.alert)
             let action = UIAlertAction(title: "確定", style: .cancel, handler: nil)
             alertController.addAction(action)
             present(alertController, animated: true, completion: nil)
-        } else if (selectedItemLabel.text != "" &&  Int(display.text!)! >= 0) {
+        } else if (selectedItemLabel.text != "請選擇類別" &&  Int(display.text!)! >= 0) {
             
             record.amount = Int(display.text!)!
             record.date = YMDformatter.string(from: myDatePicker.date)
@@ -289,14 +291,13 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
     //計算機
     @IBAction fileprivate func touchDigit(_ sender: UIButton) { //點擊0~9、小數點
         let digit = sender.currentTitle! //取數字鍵上的值
-        print("digit=\(digit)")
         if userIsInTheMiddleOfTyping { //如果有輸入過（不是第一次輸入）就進入
             let textCurrentlyInDisplay = display.text!
             if digit != DECIMAL_CHAR || display.text!.range(of: DECIMAL_CHAR) == nil { //輸入的不是小數點或display上沒有小數點
                 display.text = textCurrentlyInDisplay + digit   //
                 display.text = checkNumber(labelText: display.text!)
+                
             }
-            print("！！！")
         } else {    //第一次按會執行這
             if digit == DECIMAL_CHAR { //如果是小數點
                 display.text = "0\(digit)"
@@ -307,7 +308,6 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
                 display.text = digit
                 display.text = checkNumber(labelText: display.text!)
 
-                print("////")
             }
         }
         
